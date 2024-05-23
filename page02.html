@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+<title>52席の至福 予約サイト</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- 共通項目 -->
+<!-- CSS --> 
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/common.css">	
+	
+<!-- JS -->  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/calendar.js"></script>
+</head>
+<body>
+<header>
+	<div class="headInr">
+		<div class="logoBox">
+			<a href="/">
+				<div class="logo"><img src="img/logo.png" alt="52席の至福 予約サイト"></div>
+				<h1 class="siteName">「52席の至福」予約サイト</h1>
+			</a>
+		</div>
+		<div class="btn-internal"><a href="#">予約確認・キャンセル<br><span class="small">（領収書の発行）</span></a></div>
+	</div>
+</header>
+	
+<div id="mv">
+	<img class="pc" src="img/mv.jpg" alt="52席の至福 予約サイト"><img class="sp" src="img/mv_sp.jpg" alt="52席の至福 予約サイト">
+</div>
+	
+<div class="stepArea">
+	<ul class="wi1100">
+		<li class="step01 past"><span>条件・日程選択</span></li>
+		<li class="step02 now"><span>お客さま情報入力</span></li>
+		<li class="step03"><span>予約内容確認</span></li>
+		<li class="step04"><span>決済</span></li>
+		<li class="step05"><span>予約完了</span></li>
+	</ul>
+</div>	
+	
+	
+<div id="contents">
+<form name="sample">
+	<div class="wi1100">
+		<div class="boxWrap">
+			<div class="box">
+				<h2 class="borTit">ご予約内容</h2>
+				<div class="reserve-content">
+					<div class="cmn_dl">
+						<table>
+							<tr>
+                                <th>ご利用日</th>
+                                <td>2024年 5月 11日</td>
+                            </tr>
+                            <tr>
+                                <th>コース</th>
+                                <td>ディナーコース [ 西武秩父 (16:00頃) → 西武新宿 (18:34頃) ]</td>
+                            </tr>
+                            <tr>
+                                <th>ご乗車人数</th>
+                                <td>2名様</td>
+                            </tr>
+                            <tr>
+                                <th>オプション</th>
+                                <td>至福の特別スィーツ : 2個、Anniversaryプラン (有料) : 1名分</td>
+                            </tr>
+                            <tr>
+                                <th>旅行代金</th>
+                                <td><div class="txt_red">¥<span id="price" class="price">36,000</span> (税込)</div></td>
+                            </tr>
+						</table>
+					</div>
+					<div class="btmTxt">
+                        <p>旅行代金に含まれるもの：乗車チケット(西武線1日フリーきっぷ)・コース料理・諸税</p>
+                        <p>このコースには、添乗員は同行いたしません。最少催行人員は20人です。</p>
+					</div>
+				</div>
+			</div><!-- /.box -->
+			
+			<div class="box box_check">
+				<div class="box_check_txt">
+                    <h2 class="borTit">個人情報の取扱いについて</h2>
+                    <ul class="list-disc">
+                        <li>お預かりした個人情報は西武鉄道株式会社 (以下、当社)の「<a class="txt_link" href="https://www.seiburailway.jp/privacy/" target="_blank">個人情報保護方針</a>」に基づき適切に扱います。</li>
+                        <li>
+                            お預かりした個人情報は、下記の目的のみに利用します。
+                            <ol>
+                                <li>西武 旅するレストラン「52席の至福」乗車チケット (以下、チケット)の予約、発券、再発行、払い戻し、送付のご連絡、チケット代金のクレジットカード決済</li>
+                                <li>忘れ物に関するご連絡</li>
+                                <li>鉄道施設内で発生した事故などの記録保管</li>
+                            </ol>
+                        </li>
+                        <li>当社は上記の目的のため、当社が秘密保持契約を結んだ業務委託先に、お預かりした個人情報の取り扱いを委託することがあります。</li>
+                        <li>クレジットカード情報は本システム上で保存、管理することなく決済代行会社であるソフトバンク・ペイメント・サービス株式会社が保存・管理します。</li>
+                    </ul>
+				</div>
+				<div class="textCheck-center">
+					<div class="formCheckInput">
+						<input id="privacyCheck" class="MyCheckBox" type="checkbox" name="privacyCheck"><label for="privacyCheck">同意する</label>
+					</div>
+				</div>
+			</div><!-- /.box -->
+			
+			<div class="box box_check">
+				<div class="box_check_txt">
+                    <h2 class="borTit">旅行条件書/車内精算方法</h2>
+                    <p>お申込みの前に必ずお読みください。</p>
+                    <ul class="list-disc">
+                        <li><a class="txt_link" href="https://shifuku.seibu-group.co.jp/img/kiyaku.pdf" target="_blank">旅行条件書</a></li>
+                        <li><a class="txt_link" href="https://www.seiburailway.jp/railways/seibu52-shifuku/faq/img/payment.pdf" target="_blank">車内精算方法</a></li>
+                    </ul>
+				</div>
+				<div class="textCheck-center">
+					<div class="formCheckInput">
+						<input id="conditionCheck" class="MyCheckBox" type="checkbox" name="conditionCheck"><label for="conditionCheck">同意する</label>
+					</div>
+				</div>
+			</div><!-- /.box -->
+		</div><!-- /.boxWrap -->
+		<div class="btns">
+			<button class="btn-back non-a">ご利用日選択に戻る</button>
+			<button class="btn-internal non-a">次へすすむ<br class="sp">（メールアドレス入力）</button>
+        </div>
+	</div><!-- /.wi1000 -->
+</form>
+</div><!-- /#contents -->	
+	
+
+<div class="btn-resv sp"><a href="#"><span>予約確認・キャンセル</span>（領収書の発行）</a></div>
+<footer>
+	<div class="copy">Copyright&copy; SEIBU Railway Co.,LTD. All Rights Reserved.</div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+<title>52席の至福 予約サイト</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- 共通項目 -->
+<!-- CSS --> 
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/common.css">	
+	
+<!-- JS -->  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/input_form.js"></script>
+</head>
+<body>
+<header>
+	<div class="headInr">
+		<div class="logoBox">
+			<a href="/">
+				<div class="logo"><img src="img/logo.png" alt="52席の至福 予約サイト"></div>
+				<h1 class="siteName">「52席の至福」予約サイト</h1>
+			</a>
+		</div>
+		<div class="btn-internal"><a href="#">予約確認・キャンセル<br><span class="small">（領収書の発行）</span></a></div>
+	</div>
+</header>
+	
+<div id="mv">
+	<img class="pc" src="img/mv.jpg" alt="52席の至福 予約サイト"><img class="sp" src="img/mv_sp.jpg" alt="52席の至福 予約サイト">
+</div>
+	
+<div class="stepArea">
+	<ul class="wi1100">
+		<li class="step01 past"><span>条件・日程選択</span></li>
+		<li class="step02 past"><span>お客さま情報入力</span></li>
+		<li class="step03 past"><span>予約内容確認</span></li>
+		<li class="step04 now"><span>決済</span></li>
+		<li class="step05"><span>予約完了</span></li>
+	</ul>
+</div>		
+	
+<div id="contents">
+<form name="sample">
+	<div class="wi1100">
+		<div class="boxWrap">
+			<div class="box">
+				<h2 class="borTit">クレジットでのお支払い&nbsp;<span class="small">／ Pay with credit card</span></h2>
+				<div class="pay_foreign">
+					<div><a href="https://shifuku.seibu-group.co.jp/guide/cn.pdf" target="_blank"><img src="img/txt_pay_cht.png" alt=""></a></div>
+					<div><a href="https://shifuku.seibu-group.co.jp/guide/tc.pdf" target="_blank"><img src="img/txt_pay_chs.png" alt=""></a></div>
+					<div><a href="https://shifuku.seibu-group.co.jp/guide/ko.pdf" target="_blank"><img src="img/txt_pay_kr.png" alt=""></a></div>
+				</div>
+				<table class="form-table form-table-pay">
+                    <tbody>
+                        <tr>
+                            <th>使用可能カードブランド一覧<br><span class="small">The following cards are accepted</span></th>
+                            <td>
+								<div class="card_list">
+									<ul>
+										<li><img src="img/card_jcb.png" alt="JCB"></li>
+										<li><img src="img/card_master.png" alt="MASTER CARD"></li>
+										<li><img src="img/card_visa.png" alt="VISA"></li>
+										<li><img src="img/card_diners.png" alt="Diners Club"></li>
+										<li><img src="img/card_ae.png" alt="AMERICAN EXPRESS"></li>
+									</ul>
+								</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>カード番号&nbsp;<span class="small">／ Card Number</span></th>
+                            <td>
+								<div class="flex">
+									<input type="text" name="ccNumber" class="formTextInput_s" placeholder="0000000000">
+									<p>(ハイフンなし)&nbsp;<span class="small">/ (No hyphens)</span></p>
+								</div>
+                            </td>
+                        </tr>
+						<tr>
+							<th>有効期限&nbsp;<span class="small">／ Expiration Date</span></th>
+							<td>
+								<div class="flex">
+									<div class="flex-item">
+                                        <div class="selectBox card_date">
+											<select name="ccExpirationMonth">
+												<option value=""></option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+											</select>
+                                        </div>月<span class="small">(Month)</span>&nbsp;/
+									</div>
+									<div class="flex-item">
+                                        <div class="selectBox card_year">
+                                            <select name="ccExpirationYear">
+												<option value=""></option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                                <option value="2031">2031</option>
+                                                <option value="2032">2032</option>
+                                                <option value="2033">2033</option>
+                                                <option value="2034">2034</option>
+                                                <option value="2035">2035</option>
+                                                <option value="2036">2036</option>
+                                                <option value="2037">2037</option>
+                                                <option value="2038">2038</option>
+                                                <option value="2039">2039</option>
+                                                <option value="2040">2040</option>
+                                                <option value="2041">2041</option>
+                                                <option value="2042">2042</option>
+                                                <option value="2043">2043</option>
+                                                <option value="2044">2044</option>
+											</select>
+                                        </div>年<span class="small">(Year)</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th valign="top">セキュリティコード&nbsp;<span class="small">／ PIN</span></th>
+							<td>
+								<div class="flex">
+									<input type="text" name="securityCode" maxlength="4" size="4" value="" class="formTextInput_ss" placeholder="000">
+                                    <p>セキュリティコードを入力してください<br class="sp">&nbsp;<span class="small">/ Enter your card's PIN</span></p>
+								</div>
+								<div class="aboutBox">
+                                    <p class="tit">セキュリティコードとは／What is a PIN?</p>
+                                    <p>クレジットカード裏面の署名部の上に記載されております数字の、右から3桁を指します。<br>
+                                    （1234 567と記載されている場合は567がセキュリティコードになります）</p>
+                                    <p>It is the last 3 digits from the right, located on the back of your card at the top of the signature strip.<br>
+                                    (Ex. the numbers 567 in the line of numbers 1234 567 would be the PIN)</p>
+                                    <div class="card_sample"><img src="img/card_sample.png" alt="クレジットカード"></div>
+                                    <p>ほとんどのケースは上記に該当しますが、一部のクレジットカードにつきましてはクレジットカード表面のカード番号上部に記載されております４桁の数字を指すケースもあります。<br>ご不明な場合は、お持ちのクレジットカード会社にお問合せ下さい。</p>
+                                    <p>The above is true with most cards, however there are some cards that contain a 4 digit PIN on the front of the card, just above the card number. If you are unsure of your PIN please contact your card provider for more information.</p>
+								</div>
+							</td>
+						</tr>
+                </tbody>
+				</table>
+			</div><!-- /.box -->
+		</div><!-- /.boxWrap -->
+		
+        <div class="btns">
+			<button class="btn-back non-a">キャンセル&nbsp;<span class="small">/ Cancel</span></button>
+            <button class="btn-internal non-a">次へ&nbsp;<span class="small">/ Next</span></button>
+        </div>
+	</div><!-- /.wi1000 -->
+</form>
+</div><!-- /#contents -->	
+	
+
+<div class="btn-resv sp"><a href="#"><span>予約確認・キャンセル</span>（領収書の発行）</a></div>
+<footer>
+	<div class="copy">Copyright&copy; SEIBU Railway Co.,LTD. All Rights Reserved.</div>
+</footer>
+
+
+</body>
+</html>
