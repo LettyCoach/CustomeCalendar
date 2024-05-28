@@ -227,13 +227,7 @@ $(document).ready(function () {
         $('#pre_month').val(preMonth % 13 + "月");
         $('.currentMonth').text(curMonth);
         if (changeMonth == 0) { $('.currentYear').text(++chageYear); }
-        /*$.get('your_endpoint_here', { month: changeMonth, year: currentYear }, function(response) {
-            // Assuming the response contains the dayinform data
-            const dayinform = response.dayinform;
-            generateCalendar(changeMonth, currentYear, dayinform);
-        }).fail(function(error) {
-            console.error('Error fetching dayinform data:', error);
-        });*/
+
         generateCalendar(changeMonth, currentYear, dayinform);
     });
 
@@ -246,13 +240,6 @@ $(document).ready(function () {
         $('#pre_month').val(preMonth % 13 + "月");
         $('.currentMonth').text(curMonth);
         if (changeMonth == 11) $('.currentYear').text(--chageYear);
-        /*$.get('your_endpoint_here', { month: changeMonth, year: currentYear }, function(response) {
-            // Assuming the response contains the dayinform data
-            const dayinform = response.dayinform;
-            generateCalendar(changeMonth, currentYear, dayinform);
-        }).fail(function(error) {
-            console.error('Error fetching dayinform data:', error);
-        });*/
         generateCalendar(changeMonth, currentYear, dayinform);
     });
 });
