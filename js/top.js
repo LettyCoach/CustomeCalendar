@@ -7,8 +7,9 @@ $(document).ready(function () {
     dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
     dayOfWeek1 = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
-    var entryData = [
+    var dayinform = [
         {
+            day: 3,
             sign: "×",
             course_name: "ブランチコース",
             dept_station: "西武新宿",
@@ -19,16 +20,51 @@ $(document).ready(function () {
             statusClass: "resv_ng"
         },
         {
-            sign: "△",
+            day: 4,
+            sign: "×",
             course_name: "ブランチコース",
             dept_station: "西武新宿",
             dept_time: "10:40",
             ariv_station: "西武秩父",
             ariv_time: "13:57",
             price: "¥30,000",
-            statusClass: "resv_few"
+            statusClass: "resv_ng"
         },
         {
+            day: 5,
+            sign: "×",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_ng"
+        },
+        {
+            day: 6,
+            sign: "×",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_ng"
+        },
+        {
+            day: 11,
+            sign: "×",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_ng"
+        },
+        {
+            day: 12,
             sign: "◎",
             course_name: "ブランチコース",
             dept_station: "西武新宿",
@@ -39,6 +75,29 @@ $(document).ready(function () {
             statusClass: "resv_ok"
         },
         {
+            day: 18,
+            sign: "×",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_ng"
+        },
+        {
+            day: 19,
+            sign: "△",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_few"
+        },
+        {
+            day: 25,
             sign: "--",
             course_name: "ブランチコース",
             dept_station: "西武新宿",
@@ -47,34 +106,29 @@ $(document).ready(function () {
             ariv_time: "13:57",
             price: "¥30,000",
             statusClass: "resv_before"
-        }
-    ]
-
-    var dayinform = [
-        { id: 3, entryDataStatus: 0 },
-        { id: 4, entryDataStatus: 0 },
-        { id: 5, entryDataStatus: 0 },
-        { id: 6, entryDataStatus: 0 },
-        { id: 11, entryDataStatus: 0 },
-        { id: 12, entryDataStatus: 2 },
-        { id: 18, entryDataStatus: 0 },
-        { id: 19, entryDataStatus: 1 },
-        { id: 25, entryDataStatus: 3 },
-        { id: 26, entryDataStatus: 0 }
+        },
+        {
+            day: 26,
+            sign: "×",
+            course_name: "ブランチコース",
+            dept_station: "西武新宿",
+            dept_time: "10:40",
+            ariv_station: "西武秩父",
+            ariv_time: "13:57",
+            price: "¥30,000",
+            statusClass: "resv_ng"
+        },
     ]
 
     // Populate month and year dropdowns
 
 
 
-    generateCalendar = (month, year) => {
+    generateCalendar = (month, year, dayinform) => {
 
         const firstDay = new Date(year, month).getDay();
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         let date = 1, ok = 0;
-
-
-
 
         $('#calendar_table tbody').empty();
         for (let i = 0; i < 6; i++) {
@@ -107,27 +161,26 @@ $(document).ready(function () {
                 `;
                 const emptyDay = $('<td>').addClass('no_service');
                 for (let k = 0; k < dayinform.length; k++) {
-                    if (dayinform[k].id == date) {
-                        const no = entryData[dayinform[k].entryDataStatus];
+                    if (dayinform[k].day == date) {
                         dayElement = `
-                            <td class="resv_col ${dayOfWeek1[(firstDay + date - 1) % 7]} ${no.statusClass}" id="${date}">
+                            <td class="resv_col ${dayOfWeek1[(firstDay + date - 1) % 7]} ${dayinform[k].statusClass}" id="${date}">
                                 <div class="cal-sp_date">${month + 1}月${date}日(<span>${dayOfWeek[(firstDay + date - 1) % 7]}</span>)</div>
                                 <div class="cal-date">${date}</div>
                                 <div class = "detail">
-                                    <div class="cal-sign">${no.sign}</div>
-                                    <div class="course-name">${no.course_name}</div>
+                                    <div class="cal-sign">${dayinform[k].sign}</div>
+                                    <div class="course-name">${dayinform[k].course_name}</div>
                                     <div class="cal-station-box arrow_visivle">
                                         <div class="dept">
-                                            <span class="dept_station">${no.dept_station}</span>
-                                            <span class="dept_time">${no.dept_time}</span>
+                                            <span class="dept_station">${dayinform[k].dept_station}</span>
+                                            <span class="dept_time">${dayinform[k].dept_time}</span>
                                         </div>
                                         <div class="ariv">
-                                            <span class="ariv_station">${no.ariv_station}</span>
-                                            <span class="ariv_time">${no.ariv_time}</span>
+                                            <span class="ariv_station">${dayinform[k].ariv_station}</span>
+                                            <span class="ariv_time">${dayinform[k].ariv_time}</span>
                                         </div>
                                     </div>
                                     <div class="cal-price-box" align="center">
-                                        <span>${no.price}</span>
+                                        <span>${dayinform[k].price}</span>
                                     </div>
                                 </div>
                             </td>
@@ -163,10 +216,9 @@ $(document).ready(function () {
     }
 
     let changeMonth = currentMonth, chageYear = currentYear, nxtMonth, preMonth, curMonth;
-    generateCalendar(currentMonth, currentYear);
+    generateCalendar(currentMonth, currentYear, dayinform);
 
     $("#next_month").on("click", () => {
-
         changeMonth = (changeMonth + 1) % 12;
         curMonth = (changeMonth + 1) % 13;
         nxtMonth = (curMonth + 1) % 12 ? (curMonth + 1) % 12 : 12;
@@ -175,9 +227,8 @@ $(document).ready(function () {
         $('#pre_month').val(preMonth % 13 + "月");
         $('.currentMonth').text(curMonth);
         if (changeMonth == 0) { $('.currentYear').text(++chageYear); }
-        var dayinform = 
-        $.get()
-        generateCalendar(changeMonth, currentYear, aaa);
+
+        generateCalendar(changeMonth, currentYear, dayinform);
     });
 
     $('#pre_month').on('click', () => {
@@ -189,6 +240,6 @@ $(document).ready(function () {
         $('#pre_month').val(preMonth % 13 + "月");
         $('.currentMonth').text(curMonth);
         if (changeMonth == 11) $('.currentYear').text(--chageYear);
-        generateCalendar(changeMonth, currentYear);
+        generateCalendar(changeMonth, currentYear, dayinform);
     });
 });
