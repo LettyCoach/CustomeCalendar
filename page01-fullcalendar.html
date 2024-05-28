@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <title>52席の至福 予約サイト</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- 共通項目 -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/top.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headInr">
+            <div class="logoBox">
+                <a href="/">
+                    <div class="logo"><img src="img/logo.png" alt="52席の至福 予約サイト"></div>
+                    <h1 class="siteName">「52席の至福」予約サイト</h1>
+                </a>
+            </div>
+            <div class="btn-internal"><a href="#">予約確認・キャンセル<br><span class="small">（領収書の発行）</span></a></div>
+        </div>
+    </header>
+
+    <div id="mv">
+        <img class="pc" src="img/mv.jpg" alt="52席の至福 予約サイト"><img class="sp" src="img/mv_sp.jpg" alt="52席の至福 予約サイト">
+    </div>
+
+    <div class="stepArea">
+        <ul class="wi1100">
+            <li class="step01 now"><span>条件・日程選択</span></li>
+            <li class="step02"><span>お客さま情報入力</span></li>
+            <li class="step03"><span>予約内容確認</span></li>
+            <li class="step04"><span>決済</span></li>
+            <li class="step05"><span>予約完了</span></li>
+        </ul>
+    </div>
+
+
+    <div id="contents">
+        <form name="sample">
+            <div class="wi1100">
+                <div class="section-train-type section">
+                    <div class="twoColBox">
+                        <div class="colBox">
+                            <h2 class="subTit">コースの選択</h2>
+                            <p>運行区間と発着時刻は運行日により異なります。</p>
+                            <div class="select">
+                                <select name="train">
+                                    <option value="day">ブランチ / アーリーランチコース</option>
+                                    <option value="night">ディナー / レイトランチコース</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="colBox">
+                            <h2 class="subTit">お申込み人数の選択</h2>
+                            <p>テーブル席単位でのご予約となります。<br>
+                                5名以上でのご予約は、席ごとに複数回のご予約をお願いします。</p>
+                            <div class="select">
+                                <select name="guests">
+                                    <option value="2">2名</option>
+                                    <option value="3">3名</option>
+                                    <option value="4">4名</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-internal non-a">ご希望日選択カレンダーを表示</div>
+                </div><!-- /.section-train-type -->
+
+                <div class="section-date-select section">
+                    <div class="calendarArea">
+                        <h2 class="fuki-ora">ご希望日を選択してください</h2>
+                        <div class="cal-select">
+                            <div class="btn-prev"><input type="button" id="pre_month" value="4月"></div>
+                            <div class="date"><span class="currentYear">2024</span>年<span class="currentMonth">5</span>月
+                            </div>
+                            <div class="btn-next"><input type="button" id="next_month" value="6月"></div>
+                        </div><!-- /.cal-select -->
+
+
+                        <div id="calendar_div">
+                            <table id="calendar_table">
+                                <thead>
+                                    <th class="sun" width="14%">日
+                                    <th width="14%">月</th>
+                                    <th width="14%">火</th>
+                                    <th width="14%">水</th>
+                                    <th width="14%">木</th>
+                                    <th width="14%">金</th>
+                                    <th class="sat" width="14%">土</th>
+                                    </th>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="c_guide">
+                            <div><span class="resv_ok">◎</span>予約可能</div>
+                            <div><span class="resv_few">△</span>残りわずか</div>
+                            <div><span class="resv_ng">×</span>満席</div>
+                            <div><span class="resv_before">--</span>受付前</div>
+                        </div>
+                        <ul class="kome">
+                            <li>「『52席の至福×台湾好吃（ハウチ）※』トレイン with フージンツリー」を2024年3月22日（金）に運行します。<br>
+                                本運行は、2022年に運行し多くのお客さまからご好評をいただいた「台湾好吃（ハウチ）」トレインの第２弾です。今回の「『52席の至福×台湾好吃（ハウチ）』トレイン with
+                                フージンツリー」は、アーリーランチおよびレイトランチの2コースを運行し、人気の台湾料理店「富錦樹台菜香檳（フージンツリー）」監修のもと、台湾ならではの料理やデザートをお楽しみいただけるほか、台湾料理に合うシャンパンや台湾ビールなども用意します。<br>
+                                １号車には、台湾観光庁による台湾の多彩な魅力を紹介したパネル展示や台湾提灯の装飾を施し、日本語/中国語の２か国語による案内放送、台湾観光庁からのオリジナルギフトをプレゼントするなど、日本にいながら、そして電車に乗りながら、台湾の雰囲気をお楽しみいただけます。この機会にぜひ台湾旅行気分を味わってみてはいかがでしょうか。
+                            </li>
+                            <li>2024年4月期の申込受付開始は1月11日（木）8時00分～を予定しております。</li>
+                            <li>車内でのお飲み物（アルコール類）および各種精算方法が変更になり、現金はご利用いただけません。クレジットカード・各種電子マネーのみご利用いただけます。予めご了承ください。
+                            </li>
+                            <li>ベルーナドーム（最寄駅：西武球場前）でのプロ野球公式戦・ライブコンサート等のイベント開催の関係で、ブランチコースの始発駅およびディナーコースの終着駅が池袋駅から西武新宿駅に変更、または西武新宿駅から池袋駅に予告なく変更いたします。あらかじめご了承ください。
+                            </li>
+                            <li>イチローズ・モルト「52席の至福」プライベートボトル2022は限定商品のため、抽選とさせていただきます。あらかじめご了承ください。<br>
+                                【申込期間】2023年12月14日（木）8:00～2023年12月16日（土）23:59　【当選通知】2023年12月18日（月）～2023年12月22日（金）</li>
+                        </ul>
+                    </div><!-- /.calendarArea -->
+                    <div class="optionArea">
+                        <div class="box">
+                            <h2 class="borTit">スペシャルデザート<br class="sp">(事前申し込み限定)</h2>
+                            <div class="txtBox">
+                                <div class="select">
+                                    <select class="course-option" id="course-option_3" name="option3">
+                                        <option selected="">ご利用数を選択</option>
+                                        <option value="0">利用しない</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                        <option value="3">3個</option>
+                                        <option value="4">4個</option>
+                                    </select>
+                                </div>
+                                <div class="pic"><img src="img/option_premiumsweets.jpg" alt="至福の特別スィーツ"></div>
+                                <div class="optionTxt">
+                                    <div class="optionTit">至福の特別スィーツ　 <br class="sp"><span
+                                            class="txt_red">オプション料金：¥1,850</span></div>
+                                    <p>ちょっとしたご褒美に特別なスイーツは如何でしょうか？<br>
+                                        事前申し込み限定で秩父のスペシャル・スィーツを用意させていただきます。<br>
+                                        （完全予約制、当日対応は食材の関係でお受けしかねます。）<br>
+                                        （提供のデザートの内容は<a class="txt_link"
+                                            href="https://shifuku.seibu-group.co.jp/info/tour/438.html"
+                                            target="_blank">こちら</a>をご確認ください。）</p>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="box">
+                            <h2 class="borTit">Anniversaryプラン<br class="sp">(事前申込限定)</h2>
+                            <div class="txtBox">
+                                <div class="select">
+                                    <select class="course-option" id="course-option_4" name="option4">
+                                        <option selected="">ご利用数を選択</option>
+                                        <option value="0">利用しない</option>
+                                        <option value="1">1名分</option>
+                                        <option value="2">2名分</option>
+                                        <option value="3">3名分</option>
+                                        <option value="4">4名分</option>
+                                    </select>
+                                </div>
+                                <div class="pic"><img src="img/option_anniversary.jpg" alt="Anniversaryプラン"></div>
+                                <div class="optionTxt">
+                                    <div class="optionTit">Anniversaryプラン (有料)　<br class="sp"><span
+                                            class="txt_red">オプション料金：¥1,850</span></div>
+                                    <p>有料 (1名様 1,850円)にて特別なデザートプレートを用意させていただきます。<br>
+                                        (完全予約制、当日対応は食材の関係でお受けしかねます。)<br>
+                                        お申込みの方は、記念日の内容やお名前等を次画面の備考欄にご記入ください。<br>
+                                        <a class="txt_link" href="//shifuku.seibu-group.co.jp/info/tour/662.html"
+                                            target="_blank">※ディナーコース限定/Special Anniversaryプラン（別途）の詳細お申込みについてはこちら</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="box">
+                            <h2 class="borTit">プレミアム・ワイン<br class="sp">(数量限定ワイン)</h2>
+                            <div class="txtBox">
+                                <div class="select">
+                                    <select class="course-option" id="course-option_1" name="option1">
+                                        <option selected="">ご利用数を選択</option>
+                                        <option value="0">利用しない</option>
+                                        <option value="1">1本</option>
+                                    </select>
+                                </div>
+                                <div class="pic"><img src="img/kaityu_jyukusei_2022.jpg" alt="プレミアム・ワイン"></div>
+                                <div class="optionTxt">
+                                    <div class="optionTit">海中熟成酒秩父ルージュ 2020　<br>
+                                        秩父市収穫ミズナラオークチップ侵漬　<br class="sp"><span class="txt_red">¥17,000</span></div>
+                                    <p>秩父ルージュ　秩父市収穫　ミズナラオークチップ侵漬<br>
+                                        特別な日に、特別なワインを。埼玉・秩父の名酒を静岡・下田の透き通る海の中で熟成した「秩父ルージュ　秩父市収穫ミズナラオークチップ侵漬」を乗車時に御用意させていただきます。<br>
+                                        ※ボトルでの提供になります。未開栓でのお持ち帰りは出来ません。</p>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="box">
+                            <h2 class="borTit">プレミアム・ウィスキー<br class="sp">(事前申込限定)</h2>
+                            <div class="txtBox">
+                                <div class="select">
+                                    <select class="course-option" id="course-option_5" name="option5">
+                                        <option value="1" selected="">応募する</option>
+                                        <option value="0">応募しない</option>
+                                    </select>
+                                </div>
+                                <div class="pic"><img src="img/option_whisky.jpg" alt="プレミアム・ウィスキー"></div>
+                                <div class="optionTxt">
+                                    <div class="optionTit">プレミアム・ウィスキー　<br class="sp"><span
+                                            class="txt_red">¥29,040</span></div>
+                                    <p>イチローズ・モルト「52席の至福」プライベートボトル 2024は限定商品のため、抽選とさせていただきます。あらかじめご了承ください。</p>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                    </div>
+                    <div class="btns">
+                        <input type="button" class="btn-internal non-a" value="お客さま情報入力へ">
+                    </div>
+                </div><!-- /.section-date-select -->
+            </div><!-- /.wi1000 -->
+        </form>
+    </div><!-- /#contents -->
+
+
+    <div class="btn-resv sp"><a href="#"><span>予約確認・キャンセル</span>（領収書の発行）</a></div>
+    <footer>
+        <div class="copy">Copyright&copy; SEIBU Railway Co.,LTD. All Rights Reserved.</div>
+    </footer>
+
+
+    <!-- カレンダー選択時の満席アラート -->
+    <div class="calender_full_alert">
+        <div class="bg js-modal-close"></div>
+        <div class="alert_main">
+            <div class="grayBox">
+                <p>満席です。日にちを変更して再度選択して下さい。</p>
+            </div>
+            <div class="btn-back js-modal-close">閉じる</div>
+        </div>
+    </div>
+    <!-- /カレンダー選択時の満席アラート -->
+
+</body>
+
+</html>
